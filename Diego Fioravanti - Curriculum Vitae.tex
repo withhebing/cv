@@ -1,109 +1,209 @@
-\documentclass[english,a4paper]{europasscv}
-\ecvname{Diego Fioravanti}
-\ecvaddress{Viale Europa 111, 38057 Pergine Valsugana, TN, Italy}
-\ecvtelephone{+39 3280067080}
-\ecvemail{fioravanti.diego@gmail.com}
-\ecvhomepage{https://www.linkedin.com/in/diegofioravanti}
-\ecvdateofbirth{29/07/1989}
-\ecvnationality{Italian}
-\ecvgender{Male}
-\ecvpicture[width=1in]{picture.jpg}
-\ecvpictureleft
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hypersetup{
-    pdfauthor={Diego Fioravanti},
-    pdftitle={Diego Fioravanti - Curriculum Vitae},
-    pdfsubject={Curriculum Vitae},
-    pdfkeywords={Curriculum Vitae, CV, Diego Fioravanti, Diego, Fioravanti}
-}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex,
+            pdfauthor={Diego Fioravanti},
+            pdftitle={Diego Fioravanti - Curriculum Vitae},
+            pdfsubject={Curriculum Vitae},
+            pdfkeywords={Curriculum Vitae, CV, Diego Fioravanti, Diego, Fioravanti},
+            pdfproducer={LaTeX with hyperref},
+            pdfcreator={pdflatex}]{hyperref}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
 
 \begin{document}
-	\begin{europasscv}
-	\ecvpersonalinfo
-	
- 	\ecvsection{Education and training}
-  
-		\ecvtitlelevel{2013 -- 2015}{Master of Mathematics}{Laurea magistrale}
-			\ecvitem{}{University of Trento, department of mathematics, Trento (Italy)}
-			\ecvitem{}{Master's thesis: ``Cohomology and spectral sequences in algebraic geometry''}
-			\ecvitem{}{Advisor: Prof. Edoardo Ballico.}
 
-  		\ecvtitle{01/09/2013 -- 30/06/2014}{Erasmus}
-			\ecvitem{}{Utrecht University, Utrecth (The Netherlands)}		
-		
-		\ecvtitlelevel{2008 -- 2012}{Bachelor of Mathematics}{Laurea Triennale}
-			\ecvitem{}{University of Trento, department of mathematics, Trento (Italy)}
-			\ecvitem{}{Bachelor's thesis: ``The Artin-Wedderburn theorem''}
-			\ecvitem{}{Advisor: Prof. Willem A. de Graaf.}
-	
-		\ecvtitle{2003 -- 2008}{Diploma di Perito Industriale in Informatica (High school diploma)}
-			\ecvitem{}{Istituto d'istruzione Marie Curie, Pergine Valsugana (Italy)}	
-			
-    \ecvsection{Work experience}
-  
-		\ecvtitle{2009 -- Present}{Private tutor}
-			\ecvitem{}{Private tutoring in mathematics and IT for middle, high schools and universities in Trento, Italy}
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
 
-		\ecvtitle{08/2015 -- 06/2016}{Private tutor}
-			\ecvitem{}{Private tutoring in mathematics and IT for middle, high schools and universities in Oslo, Norway}
-   
-		\ecvtitle{09/2011 -- 12/2011}{Internship}
-			\ecvitem{}{Istituto d'istruzione Marie Curie, Pergine Valsugana (Italy)}
-			\ecvitem{}{Teaching experience in a high school}  	
-			
-    \ecvsection{Languages}
-			\ecvmothertongue{Italian}
-			\ecvlanguageheader
-				\ecvlanguage{English}{C2}{C2}{C2}{C2}{C2}
-				\ecvlanguagecertificate{TOEFL (Score 100)}
-				\ecvlastlanguage{Norwegian (Bokmål)}{B2}{B2}{B1}{B1}{B1}
-				\ecvlastlanguage{German}{A1}{A1}{A1}{A1}{A1}
-	        \ecvlanguagefooter  	
-	        
-	\ecvsection{Technical Experience}
-		\ecvblueitem{Projects}{
-		  \begin{ecvitemize}
-		    \item Parallel computation of $\pi$ (2014). Final project for the ``parallel computing'' class, the application computed $1054039$ digits of $\pi$ correctly using a parallel algorithm. C, Python.
-		    \item The sieve Of Eratosthenes (2013). Midterm project for the ``parallel computing'' class, the application executed the sieve of Eratosthenes algorithm in parallel. C, Python.
-		    \item The Artin -- Wedderburn algorithm (2012). Part of my bachelor’s thesis, the application computed the Artin -- Wedderburn decomposition of semisimple algebra. Python.
-  \end{ecvitemize}
-  		}
-  		
-  		\ecvblueitem{Languages and technologies}{
-			\begin{ecvitemize}
-	  			\item C, C++, Python, Django, Haskell, Matlab/Octave
-	  			\item Linux, Git, \LaTeX, Vim, QT5 
-	  		\end{ecvitemize}
-  		}
-  
-    \ecvsection{Personal skills}		
-		\ecvblueitem{Communication skills}{
-			\begin{ecvitemize}
-				\item Team work: I have worked in teams of various dimension during my education. During my internship experience I worked in close contact with a group of five teachers.
-                \item Mediating skills: During my experience as private tutor I taught to groups of students of various sizes always managing to accomodate the needs of the various students inside the need of the group as a whole.
-                \item Intercultural skills: I am experienced at studying and working in a European dimension thanks to my Erasmus experience and to my private tutor experience in Norway.
-          \end{ecvitemize}
-       }
-  	
-        \ecvblueitem{Organisational / managerial skills}{
-            \begin{ecvitemize}
-                \item During my Bachelor and master I organised a series of lectures on how to write a thesis in \LaTeX.
-            \end{ecvitemize}
-        }  	
-        
-        \ecvblueitem{Other skills}{            
-            \begin{ecvitemize}
-                \item Expert teacher and familiar with the modern school equipment as SMART Board and similar.
-                \item Amateur photographer.
-                \item Love to travel and experience different cultures.
-            \end{ecvitemize}
-        }
-            
-        \ecvblueitem{Driving licence}{B}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
 
-      \ecvsection{Additional information}
-  
-      \ecvblueitem{Privacy}{Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base art. 13 del D. Lgs. 196/2003.}
-      
-  	\end{europasscv}
+\begin{cv}{\spacedallcaps{Diego Fioravanti}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Born in Italy,}}{29 July 1989} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:fioravanti.diego@gmail.com}{fioravanti.diego@gmail.com}} % Email address
+
+\NewEntry{website}{\href{https://www.linkedin.com/in/diegofioravanti}{https://www.linkedin.com/in/diegofioravanti}} % Personal website
+
+\NewEntry{phone}{(M) +39 3280067080} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2013-2015}{University of Trento, Trento (Italy)}
+
+\Description{\MarginText{Master of Mathematics}This degree focussed on pure mathematics and symbolic computation, especially in the areas of algebraic geometry and commutative algebra.\newline
+Thesis: \textit{Cohomology and spectral sequences in algebraic geometry}\newline
+Advisor: Prof.~Edoardo Ballico.}
+
+%------------------------------------------------
+
+\NewEntry{2013-2014}{Utrecht University, Utrecth (The Netherlands)}
+
+\Description{\MarginText{Erasmus}Description: One year Erasmus at the Utrecht University, with classes in pure mathematics and parallel programming. }
+
+%------------------------------------------------
+
+\NewEntry{2008-2012}{University of Trento, Trento (Italy)}
+
+\Description{\MarginText{Bachelor of Mathematics}Description: This degree focussed on pure mathematics, algebra and foundational aspects, and computer science, algorithms, functional programming and scientific computing.
+Thesis: ``The Artin-Wedderburn theorem''
+Advisor: Prof.~Willem A. de Graaf.}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+
+\NewEntry{2009--Present}{Private tutor in mathematics}
+
+\Description{\MarginText{Self employed}Private tutoring in mathematics and IT for middle, high schools and universities in Trento, Italy}
+
+%------------------------------------------------
+
+\NewEntry{2015--2016}{Private tutor in mathematics}
+
+\Description{\MarginText{Self employed}Private tutoring in mathematics and IT for middle, high schools and universities in Oslo, Norway}
+
+%------------------------------------------------
+
+\NewEntry{Sep-Dec 2011}{Internship}
+
+\Description{\MarginText{Istituto d'istru\-zio\-ne\\ Marie Curie}Teaching experience in a high school as mathematics theacher}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Computer Skills}\vspace{1em}
+
+\Description{\MarginText{Basic}\textsc{java}, \textsc{html}, \textsc{css}, QT5, SQL databases}
+
+\Description{\MarginText{Intermediate}\textsc{django}, Vim, GIMP, TDD metodology}
+
+\Description{\MarginText{Advanced}\textsc{C/C++}, \textsc{python}, \LaTeX, Linux}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{Italian}}\ \ $\cdotp$\ \ \ Mothertongue}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Proficient (TOEFL certification, score: 100)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Norwegian (Bokmål)}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{German}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
+
+\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%------------------------------------------------
+
+\Description{\MarginText{Interests}Hicking\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Photography}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
 \end{document}
